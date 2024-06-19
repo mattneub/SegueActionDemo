@@ -6,11 +6,11 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "nextViewControllerSegue", sender: self)
     }
 
-    @IBSegueAction func createNextViewController(coder: NSCoder) -> UIViewController {
+    @IBSegueAction func createNextViewController(coder: NSCoder) -> UIViewController? {
         return NextViewController(
             coder: coder,
             content: Content(title: "Howdy")
-        ) ?? UIViewController()
+        )
     }
 }
 
